@@ -2,7 +2,7 @@
     "manifest_version": 2,
 
     "name": "Autolike",
-    "description": "",
+    "description": "Like button on steroids - automate likes in Tinder™, Mamba™ and other services",
     "version": "1.0",
 
     "browser_action": {
