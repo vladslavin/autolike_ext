@@ -44,9 +44,11 @@ function modifyDOM(service) {
         likeBtn = document.querySelector('.recsCardboard>div>div:nth-child(2)>div:nth-child(4)>button');
     // else if (service === 'badoo')
     //     likeBtn = document.querySelector('.recsCardboard>div>div:nth-child(2)>div:nth-child(4)>button');
-    else if (service === 'mamba')
-        likeBtn = document.querySelector('div[data-name=like-action]');
-    
+    else if (service === 'mamba') {
+        likeBtn = document.querySelector('div[data-name=like-action]') 
+            || Array.from(document.querySelectorAll('button')).find(el => el.textContent === 'Not now');
+    }
+
     likeBtn?.click(); 
 
     return likeBtn === null;
