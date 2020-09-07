@@ -38,7 +38,7 @@ const setAvatar = () => {
         }, (res) => { if (res && res[0] && res[0].includes('https://')) document.querySelector('#avatar').src = res[0]; });
 }
 
-function modifyDOM(service) {
+const modifyDOM = service => {
     let likeBtn = null;
     if (service === 'tinder')
         likeBtn = document.querySelector('.recsCardboard>div>div:nth-child(2)>div:nth-child(4)>button');
